@@ -1,4 +1,4 @@
-package booking.api;
+package booking.apiBooking.api;
 
 import booking.Constants;
 import booking.Variable;
@@ -12,7 +12,7 @@ import java.io.FileNotFoundException;
 
 public class ActionBooking {
     public Response createBooking() throws FileNotFoundException {
-        FileInputStream file = new FileInputStream("src/test/java/booking/test_data/CreateBooking.json");
+        FileInputStream file = new FileInputStream("src/test/java/booking/apiBooking/test_data/CreateBooking.json");
         JSONObject jsonObject = new JSONObject(new JSONTokener(file));
         Response response = RestAssured.given()
                 .baseUri(Constants.URI)
@@ -24,7 +24,7 @@ public class ActionBooking {
         return response;
     }
     public Response updateBooking() throws FileNotFoundException {
-        FileInputStream file = new FileInputStream("src/test/java/booking/test_data/UpdateBooking.json");
+        FileInputStream file = new FileInputStream("src/test/java/booking/apiBooking/test_data/UpdateBooking.json");
         JSONObject jsonObject = new JSONObject(new JSONTokener(file));
         Response response = RestAssured.given()
                 .baseUri(Constants.URI)

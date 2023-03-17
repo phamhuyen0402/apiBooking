@@ -1,4 +1,4 @@
-package booking.api;
+package booking.apiBooking.api;
 
 import booking.Constants;
 import io.restassured.RestAssured;

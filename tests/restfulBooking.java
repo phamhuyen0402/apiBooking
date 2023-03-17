@@ -1,8 +1,7 @@
-package booking.tests;
-
-import booking.api.ActionBooking;
-import booking.api.CreateToken;
-import booking.api.ListBooking;
+package booking.apiBooking.tests;
+import booking.apiBooking.api.ActionBooking;
+import booking.apiBooking.api.CreateToken;
+import booking.apiBooking.api.ListBooking;
 import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -40,7 +39,7 @@ public class restfulBooking {
         Assert.assertEquals(jsonObject.getString("lastname"),"Brown");
         Assert.assertEquals(jsonObject.getInt("totalprice"),111);
     }
-    //@AfterTest
+    @AfterTest
     public void deleteBooking(){
         ActionBooking deleteBooking = new ActionBooking();
         Assert.assertEquals(deleteBooking.deleteBooking().statusCode(),201);
